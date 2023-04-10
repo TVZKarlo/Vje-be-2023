@@ -8,14 +8,16 @@ korisnik['prezime']=input('Unesite prezime korisnika:').capitalize()
 korisnik['telefon']=int(input('Unesite broj telefona:'))
 korisnik['email']=input('Unesite email:').strip()
 
-osobna_iskaznica={}
+vozačka={}
 
-osobna_iskaznica['broj']=int(input('Unesite broj:'))
-osobna_iskaznica['prebivalište']=input('Unesite prebivalište:')
-osobna_iskaznica['oib']=int(input('Unesite oib:'))
+vozačka['klasa_vozila']=input('Unesite klasu vozila:')
 
-korisnik['osobna_iskaznica']=osobna_iskaznica
+dan=int(input('Unesite dan prodaje:'))
+mjesec=int(input('Unesite mjesec prodaje:'))
+godina=int(input('Unesite godinu prodaje:'))
+vozačka['datum']=date(godina,mjesec,dan)
 
+korisnik['vozačka']=vozačka
 
 # artikl={}
 #
@@ -25,11 +27,11 @@ korisnik['osobna_iskaznica']=osobna_iskaznica
 #
 prodaja={}
 
-dan=int(input('Unesite dan prodaje:'))
-mjesec=int(input('Unesite mjesec prodaje:'))
-godina=int(input('Unesite godinu prodaje:'))
+dan=int(input('Unesite dan izdavanja:'))
+mjesec=int(input('Unesite mjesec izdavanja:'))
+godina=int(input('Unesite godinu izdavanja:'))
 
-prodaja['datum']=date(godina,mjesec,dan)
+# prodaja['datum']=date(godina,mjesec,dan)
 prodaja['korisnik']=korisnik
 # prodaja['artikl']=artikl
 
@@ -43,15 +45,14 @@ prodaja['korisnik']=korisnik
 # print('Mjesec:', prodaja['datum'].month)
 # print('Godina', prodaja['datum'].year)
 
-print('Informacije o korisniku:')
-print(prodaja['korisnik']['ime'])
-print(prodaja['korisnik']['prezime'])
-print(prodaja['korisnik']['email'])
+# print('Informacije o korisniku:')
+# print(prodaja['korisnik']['ime'])
+# print(prodaja['korisnik']['prezime'])
+# print(prodaja['korisnik']['email'])
 
 
-print('Broj:',korisnik['osobna_iskaznica']['broj'])
-print('Prebivalište:',korisnik['osobna_iskaznica']['prebivalište'])
-print('OIB:',korisnik['osobna_iskaznica']['oib'])
+print('Klasa vozila:',prodaja['korisnik']['vozačka']['klasa_vozila'])
+print('Datum:',prodaja['korisnik']['vozačka']['datum'])
 
 
 
