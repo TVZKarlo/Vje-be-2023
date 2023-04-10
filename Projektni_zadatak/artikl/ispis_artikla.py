@@ -1,5 +1,8 @@
 def ispis_artikla(artikl):
-    print(f"\tartikl {artikl['Naslov']['Opis']['Cijena']}")
+    print('Informacije o artiklu: ')
+    print(f"\tNaslov: {artikl['naslov']}")
+    print(f"\tOpis: {artikl['opis']}")
+    print(f"\tCijena: {artikl['cijena']}")
 
-def get_artikl(redni_broj,artikl):
-    return f"\t{redni_broj}. {artikl['Naslov']}"
+def get_artikl(redni_broj, artikl):
+    return f"{redni_broj}. {artikl['naslov']}"
