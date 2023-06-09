@@ -1,0 +1,1 @@
+from .prazan_tekst import IznimkaPrazanTekst
