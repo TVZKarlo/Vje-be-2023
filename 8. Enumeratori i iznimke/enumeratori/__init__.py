@@ -1,1 +1,2 @@
-from .tip_studenta import TipStudenta
+from .tip_artikla import TipArtikla
+from .tip_korisnika import TipKorisnika
