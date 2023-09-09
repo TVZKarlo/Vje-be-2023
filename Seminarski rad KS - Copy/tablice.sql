@@ -23,13 +23,12 @@ računovodstvo INTEGER,
 ukupna_zarada INTEGER
 );
 
-INSERT INTO instrument (naziv) VALUES
-    ('Prim'),
-    ('Basprim'),
-    ('Harmonika'),
-    ('Bas'),
-    ('Bugarija'),
-    ('Bubanj');
+INSERT INTO kategorija (naziv) VALUES
+    ('IC'),
+    ('Tranzistor'),
+    ('Relay'),
+    ('Otpornik'),
+    ('Kondenzator');
 
 INSERT INTO blagajna (blagajna, ukupna_zarada)  VALUES
     ('0','0');
