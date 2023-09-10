@@ -52,7 +52,7 @@ while running:
     akcija = unos_intervala(1,7)
 
     if akcija == 1:
-       komponenta.append(unos_komponente(len(komponente)+1)) # unos nove komponente i spremanje u bazu podataka
+       komponente.append(unos_komponente(len(komponente)+1)) # unos nove komponente i spremanje u bazu podataka
 
        query = f""" 
 
