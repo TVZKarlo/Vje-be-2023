@@ -57,7 +57,7 @@ while running:
        query = f""" 
 
            INSERT INTO komponenta (PN, cijena, id_komponente)
-           VALUES ("{komponente[len(komponente)-1].kategorija}", "{komponente[len(komponente)-1].PN}", "{komponente[len(komponente)-1].kategorija}")
+           VALUES ("{komponente[len(komponente)-1].kategorija}", "{komponente[len(komponente)-1].PN}", "{komponente[len(komponente)-1].cijena}")
 
            """
        cur.execute(query)
@@ -76,9 +76,9 @@ while running:
 
         # privući vrijednost ukupne zarade iz baze podataka
         query1 = " SELECT ukupna_zarada FROM blagajna WHERE id_racuna = 1"
-        zarada = cur.execute(query1).fetchone()[1]
+        zarada = cur.execute(query1).fetchone()[0]
         int_zarada = int(zarada)
-        uzarada = int_zarada + projekti[len(projekti) - 1].cijena
+        uzarada = int_zarada + projekti[len(projekti) - 1].trosak
 
         #dodavanje nove vrijednosti ukupne zarade u bazu podataka
         query2 = f"""
@@ -115,7 +115,7 @@ while running:
             query = """ 
             
                 SELECT PN, cijena,  FROM komponenta
-                LEFT JOIN kategorija ON komponenta.id_kategorije = kategorija.id;
+                LEFT JOIN kategorija ON komponenta.id_kategorija = kategorija.id;
                 
             """
             data = cur.execute(query).fetchall()
