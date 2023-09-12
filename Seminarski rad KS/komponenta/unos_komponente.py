@@ -4,7 +4,7 @@ from utilities import unos_intervala
 def unos_komponente(redni_broj):
 
     PN = input(f'Unesite Part Number {redni_broj}. komponente: ').capitalize()
-    cijena= input(f'Unesite cijenu {redni_broj}. komponente: ').capitalize()
+    cijena= int(input(f'Unesite cijenu {redni_broj}. komponente: '))
     print('Odaberite kategoriju:')
     print('\t1. IC')
     print('\t2. Tranzistor')
