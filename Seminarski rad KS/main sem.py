@@ -114,8 +114,8 @@ while running:
             # ispis svih komponenti spremljenih u bazu podataka
             query = """ 
             
-                SELECT PN, cijena,  FROM komponenta
-                LEFT JOIN kategorija ON komponenta.id_kategorija = kategorija.id;
+                SELECT PN, cijena FROM komponenta
+                LEFT JOIN kategorija ON komponenta.id_kategorije = kategorija.id;
                 
             """
             data = cur.execute(query).fetchall()
